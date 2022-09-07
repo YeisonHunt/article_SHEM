@@ -1,0 +1,51 @@
+\section{NS-based SHEM Mechanism for LLC Applications}
+\label{sec:Grouped_NetSel-RFapproach}
+
+This section introduces \textbf{S}licing \textbf{H}andover Manag\textbf{E}ment \textbf{M}echanism (SHEM) in a 5G network based on Network Slicing. In particular, this section presents the motivation, and SHEM overview.
+
+\subsection{Motivation}
+\label{subsec:gm_motivation}
+
+
+
+
+\subsection{SHEM overview}
+\label{subsec:parameter_selection}
+
+
+\noindent
+\begin{lstlisting}[mathescape=true, caption={Grouping.}, label=grouping, basicstyle=\scriptsize]
+    Grouping(dev_moving)
+    	for (dev_1 to dev_n) in network_devices:
+    		if distance dev_i to dev_moving <60cm:
+    			prev_group.add(dev_i)
+    		else
+    			do nothing
+    	return prev_group
+    
+    	for (dev_1 to dev_n) in prev_group:
+    		if hist_dev_moving == hist_dev_i:
+    			final_group.add(dev_i)
+    		else
+    			do nothing
+    	return final_group
+    
+    	for (dev_1 to dev_n) in final_group:
+    		find_group_leader:
+    			by MAC camparision
+    			else by battery level
+    	return group_leader
+    
+    	for (dev_1 to dev_n) in group:
+    		find_bw_total:
+    			bw_total = bw_total + dev_i[bw]
+    		find_name_stations:
+    			stations.add(dev_i[name])
+    	return (bw_total, stations)
+    	
+    	id_group = random_number
+    	group = {id_group, group_leader, bw_total, stations}
+    	register new group
+\end{lstlisting}
+
+\vspace{5mm}

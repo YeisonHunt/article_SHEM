@@ -1,0 +1,30 @@
+\section{Comparative analysis}
+\label{sec:comparative_analysis}
+
+This section compares the individual HM with respect to group mobility  HM. Therefore,  we analyze quantitatively and qualitatively in two groups the performance of SSF, AHP-TOPSIS, Netsel-RF, Grouped AHP-TOPSIS, and Grouped Netsel-RF. Next, we will explain the metrics,  evaluation scenario, and the results obtained.
+
+
+
+\subsection{Metrics}
+\label{subsec:gb-metrics}
+
+We compared SSF, AHP-TOPSIS, Netsel-RF, Grouped AHP-TOPSIS, and Grouped Netsel-RF regarding the number of handovers, the number of messages, and selection time.
+
+
+
+\subsection{Test scenario}
+\label{subsec:gb-test-scenario}
+
+Aiming at evaluating Group NetSel-RF,  we implemented in the emulator Mininet-WiFi a network formed by four APs (Table \ref{tab:gaps-info}) and 18 end-devices  (Table \ref{tab:devices-info}) distributed in four rooms (see Figure \ref{fig:g_evaluation}). In particular $group1$ composed by  $dev1$, $dev2$, $dev3$, and $dev4$ associated to $user$ 1 and perform a rectilinear movement; $group2$ integrated by $dev5$, $dev6$, $dev7$, and $dev8$ associated to $user$ 2 and perform a diagonal movement and the other stations are static. The $group1$  and $group2$  devices perform the movement in $500$ steps at a speed of $1 m/s$ and communicate at 2,462 GHz.. 
+
+
+
+
+\subsection{Results and Analysis}
+\label{subsec:gb_resultsandanalisys}
+
+
+Below we show the behavior of the SSF,  NetSel-RF, AHP-TOPSIS, Grouped NetSel-RF, and Grouped AHP-TOPSIS mechanisms according to the number of handovers. Figure \ref{fig:ssf_group_mobility} shows the performance of traditional mechanism (SSF). SSF executes 36 handovers for $group1$ and 16 handovers for $group2$ due to bases the network selection on the RSSI and performs handover individually for a group of devices associated with a user.
+
+
+Finally, we show in Figure \ref{fig:NetSel_RF_without_group_mobility} the behavior of NetSel-RF. The results reveal a total of 20 handovers for $group1$ and 24 transfers for $group2$. In the case of Grouped NetSel-RF (Figure \ref{fig:NetSel_RF_with_group_mobility} ), we obtained a decrease of 40\% for $group$ and 33.3\% for $group2$ in the number of handovers. These results demonstrate that NetSel-RF reduces the number of handovers compared to SSF. However, Grouped NetSel-RF (NetSel-RF with group mobility) have a better performance in this metric for a group of devices associated with a user.

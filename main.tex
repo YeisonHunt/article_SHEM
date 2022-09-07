@@ -1,0 +1,121 @@
+% ==============
+% DOCUMENT CLASS
+% ==============
+
+\documentclass[journal,article,submit,moreauthors,pdftex]{Definitions/mdpi} 
+
+% ==============
+% LaTeX PACKAGES
+% ==============
+
+
+%------------------------------------------------------------------
+% Referencia hv
+\usepackage{hyperref}
+
+%------------------------------------------------------------------
+% Tablas
+\usepackage{float} 
+\usepackage{multirow}
+\usepackage{slashbox}
+
+%------------------------------------------------------------------
+% Figuras
+\usepackage{graphicx}
+\usepackage{subfigure}
+\graphicspath{{figures/}{photos/}}
+
+%------------------------------------------------------------------
+% Letras griegas
+\usepackage{textgreek}
+
+%------------------------------------------------------------------
+% codigo
+\usepackage{listings}
+%------------------------------------------------------------------
+ 
+%=================================================================
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{xx}
+\issuenum{1}
+\articlenumber{5}
+\pubyear{2020}
+\copyrightyear{2020}
+%\externaleditor{Academic Editor: name}
+\history{Received: date; Accepted: date; Published: date}
+%\updates{yes} % If there is an update available, un-comment this line
+%=================================================================
+
+% ========
+% DOCUMENT
+% ========
+
+% Full title of the paper (Capitalized)
+\Title{SHEM: Handover Mechanism to meet Low-Latency application Requirement in 5G}
+
+% Author Orchid ID: enter ID or remove command
+\newcommand{\orcidauthorA}{0000-0000-000-000X} % Add \orcidA{} behind the author's name
+%\newcommand{\orcidauthorB}{0000-0000-000-000X} % Add \orcidB{} behind the author's name
+
+% Authors, for the paper (add full first names)
+\Author{ Andres~S.~Garzon, Yeison~E.~Caicedo, Fulvio~Y.~Vivas and Oscar M. Caicedo}
+
+% Authors, for metadata in PDF
+\AuthorNames{Andres~S.~Garzon, Yeison~E.~Caicedo, Fulvio~Y.~Vivas and Oscar M. Caicedo}
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address{%
+ \quad Unicauca; andres_sgj144@unicauca.edu.co\\
+  \quad Unicauca; yecaicedo@unicauca.edu.co\\
+ \quad Unicauca; fyvivas@unicauca.edu.co\\
+  \quad Unicauca; omcaicedo@unicauca.edu.co}
+
+% Contact information of the corresponding author
+%\corres{Correspondence: e-mail@e-mail.com; Tel.: (optional; include country code; if there are multiple corresponding authors, add author initials) +xx-xxxx-xxx-xxxx (F.L.)}
+
+% Current address and/or shared authorship
+%\firstnote{Current address: Affiliation 1} 
+%\secondnote{These authors contributed equally to this work.}
+% The commands \thirdnote{} till \eighthnote{} are available for further notes
+
+%\simplesumm{} % Simple summary
+
+%\conference{} % An extended version of a conference paper
+
+
+% --------------------------------------------------------------------
+
+% Abstract and keywords
+
+
+\input{00_Abstract.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\input{01_Introduction}
+% ------------------------------------------------------------------------
+% Relative Works 
+\input{02_RelativeWork.tex}
+% ------------------------------------------------------------------------
+% NetSel-RF Approach
+\input{03_Grouped_NetSel-RF}
+% ------------------------------------------------------------------------
+% Comparative Analysis
+\input{04_Comparative.tex}
+% ------------------------------------------------------------------------
+% Conclusions
+\input{05_Conclusion.tex}
+% ------------------------------------------------------------------------
+% References
+\reftitle{References}
+\externalbibliography{yes}
+\bibliography{06_Reference.bib}
+% ------------------------------------------------------------------------
+\end{document}
+
